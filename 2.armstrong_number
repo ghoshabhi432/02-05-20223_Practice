@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int cube(int digit){
+    return digit*digit*digit;
+}
+
+int main() {
+	// your code goes here
+	int num;
+	cin>>num;
+	int temp=num;
+	int arm=0;
+	
+	while(num>0){
+	    int last=num%10;
+	    arm+=cube(last);
+	    num=num/10;
+	}
+	if(arm==temp){
+	    cout<<"armstrong number";
+	}
+	else{
+	    cout<<"not";
+	}
+	
+	return 0;
+}
+
+
+//output
+153
+
+armstrong number
